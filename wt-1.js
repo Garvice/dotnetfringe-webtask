@@ -5,6 +5,7 @@ module.exports = function(ctx, cb) {
   var body = ctx.body;
   var attempts;
   
+  console.log(ctx.secrets.SLACK_URL);
   // console.log(util.inspect(ctx.body, {depth:null}));
   console.log(body);
   
