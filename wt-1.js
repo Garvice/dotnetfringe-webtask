@@ -5,7 +5,8 @@ module.exports = function(ctx, cb) {
   var body = ctx.body;
   var attempts;
   
-  console.log(util.inspect(ctx.body, {depth:null}));
+  // console.log(util.inspect(ctx.body, {depth:null}));
+  console.log(body);
   
   if (ctx.data.showstats === "true") {
     return getStats();
