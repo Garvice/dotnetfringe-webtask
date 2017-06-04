@@ -1,7 +1,11 @@
+var util = require('util');
+
 module.exports = function(ctx, cb) {
   var slack = require("slack-notify")(ctx.secrets.SLACK_URL);
   var body = ctx.body;
   var attempts;
+  
+  console.log(util.inspect(ctx.body, {depth:null}));
   
   if (ctx.data.showstats === "true") {
     return getStats();
